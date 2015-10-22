@@ -1,8 +1,75 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-	<head>
-		<title>info2180project1</title>
-		<script type="text/javascript" scr= "script.js"></script>
-	</head>
-	<body style="background-color:#FFFFFF"></body>
+<head>
+	<title>Web Development Project 1</title>
+
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body bgcolor="bluegreen">
+<h1>Web Development Project </h1>
+<form>
+	<div id="main_adr" style="float:left;">
+		<h2>Address Book</h2>
+		<p>The results of the code done in the address book exercise are as follows:</p>
+		<p>To list the names in the contact list, click the button below:</p>
+		<p><button onClick="list();">Click Me</button> </p>
+		<p>You are able to search for persons based on the following last names:</p>
+<button onClick="search('Cooper');">Cooper </button><button onClick="search('Johnson');">Johnson </button><button onClick="search('Jones');">Jones </button>
+		<p>In the event that you wanted to add a contact fill out the follwing information:</p>
+		<p>First Name:<input type="text" id="firstName" name="firstName"></p>
+		<p>Last Name:<input type="text" id="lastName" name="lastName"></p>
+		<p>Email:<input type="text" id="email" name="email"></p>
+		<p>Phone Number:<input type="text" id="phoneNumber" name="phoneNumber"></p>
+		<p> The click the button bellow, you can then try the list function again to see if it was added.</p>
+		<script type="text/javascript"> 
+			/*var getVals=[""+firstName,""+lastName,""+email,""+phoneNumber];*/
+			function runfunc(){
+			var f=document.getElementById("firstName").value;
+			var l=document.getElementById("lastName").value;
+			var e=document.getElementById("email").value;
+			var p=document.getElementById("phoneNumber").value;
+			add(''+f,''+l,''+e,''+p);
+		}
+		</script>
+	
+		<p> <button  onClick="runfunc();list();">Add</button></p>
+
+
+
+	</div>
+	<div id="cash_reg" style="float:right;">
+		<h2>Cash Register Results</h2>
+		<p>The result of the code done in the cash register exercise is as follows. </p>
+		<p>At a calculation of item * quantity based on the instructions given :
+			<ul>
+				<li>Eggs, 0.98 * quantity </li>
+				<li>Milk, 1.23 * quantity </li>
+				<li>Magazine, 4.99 * quantity </li>
+				<li>Chocolate, 0.45 * quantity </li>
+			</ul>
+		</p>
+		<p>The various quantities are as followed:
+			<ul>
+				<li>Eggs, 300000 units</li>
+				<li>Milk, 10 units</li>
+				<li>Magazine, 1234 units</li>
+				<li>Chocolate, 3 units</li>
+			</ul>
+		</p>
+		<p><button onClick="alert( 'Your bill is $'+cashRegister.total);"> Result</button> <!--<script type="text/javascript"> document.write( 'Your bill is $'+cashRegister.total);</script>-->
+
+	</div>	
+</form>
+
+
+
+<div style="clear:both;"></div>
+
+
+
+
+<footer>
+	Id Number: 620056991 | Name: Leon-Neil Nash
+</footer>
+</body>
 </html>
